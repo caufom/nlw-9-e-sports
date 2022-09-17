@@ -31,12 +31,12 @@ export function DuoCard({ data, onConnect }: Props) {
 
       <DuoInfo
         label='Tempo de jogo'
-        value={`${data.yearsPlaying} ano${data.yearsPlaying !== 1 && 's'}`}
+        value={`${data.yearsPlaying} ano${data.yearsPlaying !== 1 ? 's' : ''}`}
       />
 
       <DuoInfo
         label='Disponibilidade'
-        value={`${weekLength} dia${weekLength !== 1 && 's'} \u2022 ${data.hourStart} - ${data.hourEnd}`}
+        value={`${weekLength} dia${weekLength !== 1 ? 's' : 1} \u2022 ${data.hourStart} - ${data.hourEnd}`}
       />
 
       <DuoInfo
